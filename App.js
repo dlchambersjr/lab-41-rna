@@ -23,6 +23,11 @@ class Counter extends React.Component {
     };
   }
 
+  handleReset(value) {
+    let counter = 0
+    let counterClass = counter >= 0 ? 'positive' : 'negative';
+    this.setState({ counter, counterClass });
+  }
   handleButtonClick(value) {
     let counter = this.state.counter + value;
     if (counter !== 0 && counter % 15 === 0) {
@@ -52,6 +57,11 @@ class Counter extends React.Component {
         <TouchableOpacity onPress={() => this.handleButtonClick(-1)}>
           <View style={styles.button}>
             <Text style={styles.buttonText}>-</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => this.handleReset()}>
+          <View style={styles.resetButton}>
+            <Text style={styles.resetText}>RESET</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -98,6 +108,20 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 60,
+    padding: 5,
+    color: 'white',
+  },
+  resetButton: {
+    marginTop: 30,
+    marginBottom: 30,
+    marginHorizontal: 115,
+    width: 150,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'purple',
+  },
+  resetText: {
+    fontSize: 25,
     padding: 5,
     color: 'white',
   },
