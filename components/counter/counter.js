@@ -13,7 +13,7 @@ class Counter extends React.Component {
     };
   }
 
-  handleReset(value) {
+  handleReset() {
     let counter = 0
     let counterClass = counter >= 0 ? 'positive' : 'negative';
     this.setState({ counter, counterClass });
