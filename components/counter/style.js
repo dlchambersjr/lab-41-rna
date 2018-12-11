@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#2196F3',
+    borderWidth: 3,
+    borderColor: 'black'
   },
   buttonText: {
     fontSize: 60,
@@ -44,7 +46,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'purple',
-
   },
   resetText: {
     fontSize: 25,
@@ -55,10 +56,10 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
   },
   positive: {
-    backgroundColor: 'green',
+    color: 'green',
   },
   negative: {
-    backgroundColor: 'red',
+    color: 'red',
   },
 });
 
