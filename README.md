@@ -14,70 +14,24 @@ This is the hub that ties all the modules together and exports them to the phone
 
 #### `component/header/header.js` -> <Text>
 
-#### `component/counter/counter.js` -> <Text>
+#### `component/counter/counter.js` -> <button> and <Text>
 ##### Exported Values and Methods
 
-<!-- ###### `foo(thing) -> string`
-Usage Notes or examples
+###### `handleReset() -> updates state`
+Used to update state for the counter and the counter style.
 
-###### `bar(array) -> array`
-Usage Notes or examples -->
+###### `handleButtonClick(value) -> updates state`
+used to increase/decrease the counter value and set the class based on a positive or negative value of the counter.
 
 #### `component/footer/footer.js` -> <Text>
 
-
-#### `app.js` -> modules to phone
-##### Exported Values and Methods
-
-<!-- ###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples -->
-
-#### `app.js` -> modules to phone
-##### Exported Values and Methods
-
-<!-- ###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples -->
-
-#### `app.js` -> modules to phone
-##### Exported Values and Methods
-
-<!-- ###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples -->
-
-#### `app.js` -> modules to phone
-##### Exported Values and Methods
-
-<!-- ###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples -->
+#### `style.js` -> styles for respective modules
+Each component has a style.js that exports the styles for the particular style.
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* `npm run start` from the folder of the repo.
 
 #### UML
-Link to an image of the UML for your application and response to events
+[Fizz Buzz UML](https://raw.githubusercontent.com/dlchambersjr/lab-41-rna/master/lab-41-rna-uml.jpg)
