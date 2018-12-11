@@ -1,13 +1,83 @@
-# Sample Snack app
+## Lab-41-rna: Fizz Buzz Speaker
 
-Welcome to Expo!
+### Author: David Chambers
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by clicking the **Run** button or use the simulator by clicking **Tap to Play**. When you're done, click **Save** and share the link!
+### Links and Resources
+* [repo](https://github.com/dlchambersjr/lab-41-rna)
+* [snack](https://snack.expo.io/@dlchambersjr/rna-counter)
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Export** your project and use it with [expo-cli](https://docs.expo.io/versions/latest/introduction/installation.html).
 
-Projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the **Embed** button.
+### Modules
+#### `app.js` -> render to phone
+##### Exported Values and Methods
+This is the hub that ties all the modules together and exports them to the phone.
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io).
+#### `component/header/header.js` -> <Text>
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack-web).
+#### `component/counter/counter.js` -> <Text>
+##### Exported Values and Methods
+
+<!-- ###### `foo(thing) -> string`
+Usage Notes or examples
+
+###### `bar(array) -> array`
+Usage Notes or examples -->
+
+#### `component/footer/footer.js` -> <Text>
+
+
+#### `app.js` -> modules to phone
+##### Exported Values and Methods
+
+<!-- ###### `foo(thing) -> string`
+Usage Notes or examples
+
+###### `bar(array) -> array`
+Usage Notes or examples -->
+
+#### `app.js` -> modules to phone
+##### Exported Values and Methods
+
+<!-- ###### `foo(thing) -> string`
+Usage Notes or examples
+
+###### `bar(array) -> array`
+Usage Notes or examples -->
+
+#### `app.js` -> modules to phone
+##### Exported Values and Methods
+
+<!-- ###### `foo(thing) -> string`
+Usage Notes or examples
+
+###### `bar(array) -> array`
+Usage Notes or examples -->
+
+#### `app.js` -> modules to phone
+##### Exported Values and Methods
+
+<!-- ###### `foo(thing) -> string`
+Usage Notes or examples
+
+###### `bar(array) -> array`
+Usage Notes or examples -->
+
+### Setup
+#### `.env` requirements
+* `PORT` - Port Number
+* `MONGODB_URI` - URL to the running mongo instance/db
+
+#### Running the app
+* `npm start`
+* Endpoint: `/foo/bar/`
+  * Returns a JSON object with abc in it.
+* Endpoint: `/bing/zing/`
+  * Returns a JSON object with xyz in it.
+
+#### Tests
+* How do you run tests?
+* What assertions were made?
+* What assertions need to be / should be made?
+
+#### UML
+Link to an image of the UML for your application and response to events

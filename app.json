@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "rna-counter",
-    "description": "No description",
-    "slug": "snack-Bkme8A214",
+    "name": "fizz-buzz-app",
+    "description": "Fizz Buzz Counter",
+    "slug": "fizz-buzz-app",
     "privacy": "unlisted",
     "sdkVersion": "31.0.0",
     "version": "1.0.0",
