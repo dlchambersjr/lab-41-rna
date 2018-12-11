@@ -1,18 +1,10 @@
 import * as React from 'react';
+import { TouchableOpacity, Text, View, } from 'react-native';
+import { Speech } from 'expo';
 
-import {
-  TouchableOpacity,
-  Alert,
-  Button,
-  Text,
-  View,
-  StyleSheet,
-} from 'react-native';
-
-import { Speech, Constants } from 'expo';
-
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import styles from './components/style';
 
 class Counter extends React.Component {
   constructor(props) {
@@ -31,11 +23,12 @@ class Counter extends React.Component {
   handleButtonClick(value) {
     let counter = this.state.counter + value;
     if (counter !== 0 && counter % 15 === 0) {
-      Alert.alert('FIZZ BUZZ');
+      Speech.speak('FIZZ BUZZ');
     } else if (counter !== 0 && counter % 5 === 0) {
-      Alert.alert('BUZZ');
+      Speech.speak('BUZZ');
     } else if (counter !== 0 && counter % 3 === 0) {
-      Alert.alert('FIZZ');
+      Speech.speak('FIZZ');
+
     }
     let counterClass = counter >= 0 ? 'positive' : 'negative';
     this.setState({ counter, counterClass });
@@ -82,53 +75,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    fontSize: 60,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: 'white',
-  },
-  button: {
-    marginTop: 30,
-    marginBottom: 30,
-    marginHorizontal: 115,
-    width: 150,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#2196F3',
-  },
-  buttonText: {
-    fontSize: 60,
-    padding: 5,
-    color: 'white',
-  },
-  resetButton: {
-    marginTop: 30,
-    marginBottom: 30,
-    marginHorizontal: 115,
-    width: 150,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'purple',
-  },
-  resetText: {
-    fontSize: 25,
-    padding: 5,
-    color: 'white',
-  },
-  positive: {
-    backgroundColor: 'green',
-  },
-  negative: {
-    backgroundColor: 'red',
-  },
-});
